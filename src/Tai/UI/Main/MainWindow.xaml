@@ -1,0 +1,25 @@
+﻿<lancer:LUWindow  xmlns:lancer="https://github.com/lancerui/lancer" x:Class="Tai.UI.Main.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tai.UI.Main" xmlns:navigation="clr-namespace:LancerUI.Controls.Navigation;assembly=LancerUI" xmlns:buttons="clr-namespace:LancerUI.Controls.Buttons;assembly=LancerUI" xmlns:input="clr-namespace:LancerUI.Controls.Input;assembly=LancerUI"
+                  mc:Ignorable="d"
+                Title="Tai" Height="600" Width="900" Icon="/Resources/Icon/tai32.ico" WindowStartupLocation="CenterScreen">
+    <lancer:LUWindow.TitleBarSubContent>
+        <buttons:LUButton Width="34" Height="34" Margin="10,0,0,0" Icon="ArrowLeft" IconSize="14" Appearance="Subtle" Command="{Binding GoBackCommand}" Visibility="{Binding GoBackVisibility}"/>
+    </lancer:LUWindow.TitleBarSubContent>
+    <lancer:LUWindow.TitleBarMainContent>
+        <input:LUInput VerticalAlignment="Center" Margin="10,0,0,0" MaxWidth="400" Placeholder="搜索应用或站点" Icon="Search"/>
+    </lancer:LUWindow.TitleBarMainContent>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <navigation:Navigation ItemsSource="{Binding NavigationItems}" SelectedItem="{Binding SelectedNavigationItem,Mode=TwoWay}" Margin="5,0" />
+        <Grid Grid.Column="1">
+            <Frame x:Name="PageFrame" NavigationUIVisibility="Visible" />
+        </Grid>
+    </Grid>
+</lancer:LUWindow>
