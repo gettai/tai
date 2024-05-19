@@ -1,0 +1,14 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Tai">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Tai;component/Controls/Card/Card.xaml"/>
+        <ResourceDictionary Source="/Tai;component/Controls/ProgressList/ProgressList.xaml"/>
+        <ResourceDictionary Source="/Tai;component/Controls/ProgressList/ProgressListItem.xaml"/>
+        <ResourceDictionary Source="/Tai;component/Controls/Title/Title.xaml"/>
+        <ResourceDictionary Source="/Tai;component/Controls/DurationTextBlock/DurationTextBlock.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

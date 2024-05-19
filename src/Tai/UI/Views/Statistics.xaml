@@ -3,117 +3,121 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Tai.UI.Views"
+      xmlns:local="clr-namespace:Tai.UI.Views" xmlns:selectorbar="clr-namespace:LancerUI.Controls.SelectorBar;assembly=LancerUI" xmlns:card="clr-namespace:Tai.Controls.Card" xmlns:select="clr-namespace:LancerUI.Controls.Select;assembly=LancerUI" xmlns:title="clr-namespace:Tai.Controls.Title" xmlns:chart="clr-namespace:LancerUI.Controls.Chart;assembly=LancerUI" xmlns:datetime="clr-namespace:LancerUI.Controls.DateTime;assembly=LancerUI" xmlns:progresslist="clr-namespace:Tai.Controls.ProgressList"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Statistics">
+    <Border Background="#f9f9f9" BorderBrush="#e1e6ea" BorderThickness="1,1,0,0" CornerRadius="6,0,0,0" Padding="10">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <StackPanel>
+                <TextBlock Text="统计" FontSize="16" FontWeight="Bold"/>
+                <selectorbar:LUSelectorBar Margin="0,10,0,0" FontSize="14">
+                    <selectorbar:LUSelectorBarItem Icon="DataHistogram" Text="全部"/>
+                    <selectorbar:LUSelectorBarItem Icon="Apps" Text="应用"/>
+                    <selectorbar:LUSelectorBarItem Icon="WebAsset" Text="网站"/>
+                </selectorbar:LUSelectorBar>
+                <!--筛选 start-->
+                <card:Card Margin="0,20,0,0">
+                    <Grid Margin="0,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="时间" VerticalAlignment="Center"/>
+                            <select:LUSelect Width="120" Margin="10,0,0,0" VerticalAlignment="Center">
+                                <select:LUSelectItem Text="按天"/>
+                                <select:LUSelectItem Text="按周"/>
+                                <select:LUSelectItem Text="按月"/>
+                                <select:LUSelectItem Text="按年"/>
+                                <select:LUSelectItem Text="自定义"/>
+                            </select:LUSelect>
+                            <datetime:LUCalendarDatePickerButton Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </card:Card>
+                <!--筛选 end-->
+                <!--统计信息 start-->
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <card:Card Margin="0,0,0,0" Header="总计" Height="80">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Bottom" FontSize="26" Text="6" FontWeight="Bold"/>
+                            <TextBlock VerticalAlignment="Bottom" Margin="5,0,0,0" FontSize="14" Text="小时" />
+                        </StackPanel>
+                    </card:Card>
+                    <card:Card Grid.Column="2" Header="应用数" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Bottom" FontSize="26" Text="3" FontWeight="Bold"/>
+                            <TextBlock VerticalAlignment="Bottom" Margin="5,0,0,0" FontSize="14" Text="个" />
+                        </StackPanel>
+                    </card:Card>
+                    <card:Card Grid.Column="4" Header="最长">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Bottom" FontSize="26" Text="3" FontWeight="Bold"/>
+                            <TextBlock VerticalAlignment="Bottom" Margin="5,0,0,0" FontSize="14" Text="小时" />
+                        </StackPanel>
+                    </card:Card>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="Test" Margin="10"/>
-        <ScrollViewer Grid.Row="1" Background="Green">
-        <StackPanel>
-            <TextBlock Text="统计"/>
+                </Grid>
+                <!--统计信息 end-->
 
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
-            <TextBlock Text="统计"/>
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="300"/>
+                    </Grid.ColumnDefinitions>
+
+                    <card:Card Grid.Column="0" Header="分类">
+                        <Border Padding="10,10,10,10">
+                            <chart:LUChartColumn DisplayType="Stack" Height="225" Data="{Binding ChartData}" Labels="{Binding ChartLabels}"/>
+                        </Border>
+                    </card:Card>
+                    <card:Card Header="偏好" Grid.Column="2" >
+                        <Border Padding="10,10,10,10">
+                            <chart:LUChartRadar Size="160" Height="225" Data="{Binding ChartData}" Labels="{Binding ChartLabels}"/>
+                        </Border>
+                    </card:Card>
+                </Grid>
+                <card:Card Header="趋势" Margin="0,10,0,0">
+                    <Border Padding="10,10,10,10">
+                        <chart:LUChartLine Height="220" Data="{Binding ChartData}" Labels="{Binding ChartLabels}"/>
+                    </Border>
+                </card:Card>
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <card:Card Header="最为频繁">
+                        <Border Padding="0,5">
+                            <progresslist:ProgressList>
+                                <progresslist:ProgressListItem Title="Google Chrome" Description="123" Image="/Resources/Icon/tai32.ico"/>
+                                <progresslist:ProgressListItem Title="Google Chrome" Description="123" Image="/Resources/Icon/tai32.ico"/>
+                                <progresslist:ProgressListItem Title="Google Chrome" Description="123" Image="/Resources/Icon/tai32.ico"/>
+                            </progresslist:ProgressList>
+                        </Border>
+                    </card:Card>
+                    <card:Card Grid.Column="2" Header="使用最少">
+                        <Border Padding="0,5">
+                            <progresslist:ProgressList>
+                                <progresslist:ProgressListItem Title="Google Chrome" Description="123" Image="/Resources/Icon/tai32.ico"/>
+                                <progresslist:ProgressListItem Title="Google Chrome" Description="123" Image="/Resources/Icon/tai32.ico"/>
+                                <progresslist:ProgressListItem Title="Google Chrome" Description="123" Image="/Resources/Icon/tai32.ico"/>
+                            </progresslist:ProgressList>
+                        </Border>
+                    </card:Card>
+                </Grid>
+                <!--<title:Title Icon="SlideMultipleFilled" Margin="0,10,0,0" Text="分类"/>-->
+
             </StackPanel>
         </ScrollViewer>
-    </Grid>
+    </Border>
 </Page>

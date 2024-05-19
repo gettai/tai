@@ -17,4 +17,9 @@
     <SolidColorBrush x:Key="DisabledBgBrush" Color="#f0f0f0" />
     <!--禁用前景色-->
     <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#bdbdbd" />
+
+        <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Card.xaml"/>
+        <ResourceDictionary Source="ProgressList.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -15,6 +15,9 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,11 +30,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -82,9 +82,83 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Common\CryptographyHelper.cs" />
+    <Compile Include="Common\DateTimeHelper.cs" />
+    <Compile Include="Common\HttpHelper.cs" />
+    <Compile Include="Common\Logger.cs" />
+    <Compile Include="Common\ProcessHelper.cs" />
+    <Compile Include="Common\ThreadSafeDictionary.cs" />
+    <Compile Include="Common\UrlHelper.cs" />
+    <Compile Include="Constants\AppConstants.cs" />
+    <Compile Include="Controls\Card\Card.cs" />
+    <Compile Include="Controls\DurationTextBlock\DurationTextBlock.cs" />
+    <Compile Include="Controls\ProgressList\ProgressList.cs" />
+    <Compile Include="Controls\ProgressList\ProgressListItem.cs" />
+    <Compile Include="Controls\Title\Title.cs" />
+    <Compile Include="Common\FileHelper.cs" />
+    <Compile Include="Core\Data\Models\App.cs" />
+    <Compile Include="Core\Data\Models\WebInactiveTimeLog.cs" />
+    <Compile Include="Core\Data\Models\WebActiveTimeLog.cs" />
+    <Compile Include="Core\Data\Models\AppInactiveTimeLog.cs" />
+    <Compile Include="Core\Data\Models\AppActiveTimeLog.cs" />
+    <Compile Include="Core\Data\Models\Category.cs" />
+    <Compile Include="Core\Data\Models\Website.cs" />
+    <Compile Include="Core\Data\TaiDbConfiguration.cs" />
+    <Compile Include="Core\Data\TaiDbContext.cs" />
+    <Compile Include="Core\Event\PollingEventHandler.cs" />
+    <Compile Include="Core\Event\TaiSentryInactiveAppDataEventHandler.cs" />
+    <Compile Include="Core\Event\TaiSentryStatusEventHandler.cs" />
+    <Compile Include="Core\Event\TaiSentryActiveAppDataEventHandler.cs" />
+    <Compile Include="Core\Event\WebBrowserListenerEventHandler.cs" />
+    <Compile Include="Core\Message\TaiSentryAppInfo.cs" />
+    <Compile Include="Core\Message\TaiSentryInactiveAppTimeMessage.cs" />
+    <Compile Include="Core\Message\TaiSentryActiveAppTimeMessage.cs" />
+    <Compile Include="Core\Message\TaiSentryMessageBase.cs" />
+    <Compile Include="Core\Message\TaiSentryStatusMessage.cs" />
+    <Compile Include="Core\Message\TaiWebBrowserClosedMessage.cs" />
+    <Compile Include="Core\Message\TaiWebBrowserInactiveMessage.cs" />
+    <Compile Include="Core\Message\TaiWebBrowserActiveMessage.cs" />
+    <Compile Include="Core\Message\TaiWebBrowserMessageBase.cs" />
+    <Compile Include="Core\Message\Types\TaiSentryAppType.cs" />
+    <Compile Include="Core\Message\Types\TaiSentryMessageType.cs" />
+    <Compile Include="Core\Message\Types\TaiWebBrowserMessageType.cs" />
+    <Compile Include="Core\Services\AppData.cs" />
+    <Compile Include="Core\Services\AppIconHandler.cs" />
+    <Compile Include="Core\Services\AppTimeTracker.cs" />
+    <Compile Include="Core\Services\CoreMain.cs" />
+    <Compile Include="Core\Services\DataBase.cs" />
+    <Compile Include="Core\Services\IAppData.cs" />
+    <Compile Include="Core\Services\IWebsiteIconHandler.cs" />
+    <Compile Include="Core\Services\IAppIconHandler.cs" />
+    <Compile Include="Core\Services\IAppTimeTracker.cs" />
+    <Compile Include="Core\Services\ICoreMain.cs" />
+    <Compile Include="Core\Services\IDataBase.cs" />
+    <Compile Include="Core\Services\IPolling.cs" />
+    <Compile Include="Core\Services\ITaiSentry.cs" />
+    <Compile Include="Core\Services\IWebBrowserListener.cs" />
+    <Compile Include="Core\Services\IWebData.cs" />
+    <Compile Include="Core\Services\IWebTimeTracker.cs" />
+    <Compile Include="Core\Services\Polling.cs" />
+    <Compile Include="Core\Services\TaiSentry.cs" />
+    <Compile Include="Core\Services\WebBrowserListener.cs" />
+    <Compile Include="Core\Services\WebData.cs" />
+    <Compile Include="Core\Services\WebsiteIconHandler.cs" />
+    <Compile Include="Core\Services\WebTimeTracker.cs" />
+    <Compile Include="Core\Types\UserState.cs" />
+    <Compile Include="DIConfig.cs" />
     <Compile Include="UI\Common\CommonEventHandler.cs" />
     <Compile Include="UI\Common\UICommand.cs" />
     <Compile Include="UI\Common\UINotifyProperty.cs" />
+    <Compile Include="UI\DataAccess\AppActiveTimeLogRepository.cs" />
+    <Compile Include="UI\DataAccess\AppInactiveTimeLogRepository.cs" />
+    <Compile Include="UI\DataAccess\AppRepository.cs" />
+    <Compile Include="UI\DataAccess\IAppActiveTimeLogRepository.cs" />
+    <Compile Include="UI\DataAccess\IAppInactiveTimeLogRepository.cs" />
+    <Compile Include="UI\DataAccess\IAppRepository.cs" />
+    <Compile Include="UI\DataAccess\IWebActiveTimeLogRepository.cs" />
+    <Compile Include="UI\DataAccess\IWebRepository.cs" />
+    <Compile Include="UI\DataAccess\WebActiveTimeLogRepository.cs" />
+    <Compile Include="UI\DataAccess\WebRepositroy.cs" />
     <Compile Include="UI\Main\MainVM.cs" />
     <Compile Include="UI\Main\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -94,17 +168,19 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="UI\Main\Models\NavigationMenuItem.cs" />
-    <Compile Include="UI\Servicer\IRouter.cs" />
-    <Compile Include="UI\Servicer\IUIMainServicer.cs" />
-    <Compile Include="UI\Servicer\INotifyIconServicer.cs" />
-    <Compile Include="UI\Servicer\IServicer.cs" />
-    <Compile Include="UI\Servicer\IWindowsServicer.cs" />
-    <Compile Include="UI\Servicer\Router.cs" />
-    <Compile Include="UI\Servicer\UIMainServicer.cs" />
-    <Compile Include="UI\Servicer\NotifyIconServicer.cs" />
-    <Compile Include="UI\Servicer\WindowsServicer.cs" />
+    <Compile Include="UI\Models\ProgressListItem.cs" />
+    <Compile Include="UI\Services\IRouter.cs" />
+    <Compile Include="UI\Services\IUIMainServicer.cs" />
+    <Compile Include="UI\Services\INotifyIconServicer.cs" />
+    <Compile Include="UI\Services\IServicer.cs" />
+    <Compile Include="UI\Services\IWindowsServicer.cs" />
+    <Compile Include="UI\Services\Router.cs" />
+    <Compile Include="UI\Services\UIMainServicer.cs" />
+    <Compile Include="UI\Services\NotifyIconServicer.cs" />
+    <Compile Include="UI\Services\WindowsServicer.cs" />
     <Compile Include="UI\ViewModels\OverviewVM.cs" />
     <Compile Include="UI\ViewModels\Page2VM.cs" />
+    <Compile Include="UI\ViewModels\StatisticsVM.cs" />
     <Compile Include="UI\Views\Overview.xaml.cs">
       <DependentUpon>Overview.xaml</DependentUpon>
     </Compile>
@@ -117,7 +193,39 @@
     <Compile Include="UI\Views\Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\Card\Card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DurationTextBlock\DurationTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProgressList\ProgressList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProgressList\ProgressListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Title\Title.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Theme\Light\ProgressList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme\Light\Card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Theme\Light\Light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -146,24 +254,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -177,9 +267,7 @@
   <ItemGroup>
     <Resource Include="Resources\Icon\tai32.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
@@ -195,6 +283,21 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting">
       <Version>8.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="NLog">
+      <Version>5.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="SQLite.CodeFirst">
+      <Version>1.7.0.36</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite">
+      <Version>1.0.118</Version>
+    </PackageReference>
+    <PackageReference Include="WebSocketSharp">
+      <Version>1.0.3-rc11</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

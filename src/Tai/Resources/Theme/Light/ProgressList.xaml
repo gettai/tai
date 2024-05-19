@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="ProgressListItemIconBgBrush" Color="#f3f3f3" />
+    <SolidColorBrush x:Key="ProgressListItemProgressBarBrush" Color="#bababa" />
+    <SolidColorBrush x:Key="ProgressListItemHoverBgBrush" Color="#f6f6f6" />
+    <SolidColorBrush x:Key="ProgressListItemTitleBrush" Color="#000" />
+    <SolidColorBrush x:Key="ProgressListItemDescriptionBrush" Color="#5e5f5f" />
+</ResourceDictionary>

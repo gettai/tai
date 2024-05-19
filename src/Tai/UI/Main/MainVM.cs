@@ -16,7 +16,7 @@ using System.Windows.Forms;
 using System.Windows.Navigation;
 using Tai.UI.Common;
 using Tai.UI.Main.Models;
-using Tai.UI.Servicer;
+using Tai.UI.Services;
 using Tai.UI.Views;
 
 namespace Tai.UI.Main
@@ -92,10 +92,31 @@ namespace Tai.UI.Main
                 new NavigationMenuItem
                 {
                     Title = "统计",
-                    Icon= LancerUI.Controls.Types.IconSymbol.Flowchart,
-                    SelectedIcon= LancerUI.Controls.Types.IconSymbol.FlowchartFilled,
+                    Icon= LancerUI.Controls.Types.IconSymbol.DataHistogram,
+                    SelectedIcon= LancerUI.Controls.Types.IconSymbol.DataHistogramFilled,
                     PageType = typeof(Statistics)
                 },
+                new NavigationMenuItem
+                {
+                    Title = "记录",
+                    Icon= LancerUI.Controls.Types.IconSymbol.CalendarAgenda,
+                    SelectedIcon= LancerUI.Controls.Types.IconSymbol.CalendarAgendaFilled,
+                    PageType = typeof(Statistics)
+                },
+                new NavigationMenuItem
+                {
+                    Title = "分类",
+                    Icon= LancerUI.Controls.Types.IconSymbol.TagMultiple,
+                    SelectedIcon= LancerUI.Controls.Types.IconSymbol.TagMultipleFilled,
+                    PageType = typeof(Statistics)
+                },
+                //new NavigationMenuItem
+                //{
+                //    Title = "插件",
+                //    Icon= LancerUI.Controls.Types.IconSymbol.PuzzlePiece,
+                //    SelectedIcon= LancerUI.Controls.Types.IconSymbol.PuzzlePieceFilled,
+                //    PageType = typeof(Statistics)
+                //},
             };
         }
 

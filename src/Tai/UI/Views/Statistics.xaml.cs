@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tai.UI.ViewModels;
 
 namespace Tai.UI.Views
 {
@@ -20,9 +21,10 @@ namespace Tai.UI.Views
     /// </summary>
     public partial class Statistics : Page
     {
-        public Statistics()
+        public Statistics(StatisticsVM vm_)
         {
             InitializeComponent();
+            DataContext = vm_;
         }
     }
 }

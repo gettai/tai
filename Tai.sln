@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F826BA92-53C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tai", "src\Tai\Tai.csproj", "{F3B955AC-0390-499E-AF88-68E6FA74A99B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7C0B30A5-27F7-4D61-B48C-C00B0F9DE88D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tai.Tests", "tests\Tai.Tests\Tai.Tests.csproj", "{B9174565-C2FF-420A-AAD3-CBE4141D4A7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{F3B955AC-0390-499E-AF88-68E6FA74A99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3B955AC-0390-499E-AF88-68E6FA74A99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3B955AC-0390-499E-AF88-68E6FA74A99B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9174565-C2FF-420A-AAD3-CBE4141D4A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9174565-C2FF-420A-AAD3-CBE4141D4A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9174565-C2FF-420A-AAD3-CBE4141D4A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9174565-C2FF-420A-AAD3-CBE4141D4A7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F3B955AC-0390-499E-AF88-68E6FA74A99B} = {F826BA92-53C4-47F6-8010-2D5595B20044}
+		{B9174565-C2FF-420A-AAD3-CBE4141D4A7F} = {7C0B30A5-27F7-4D61-B48C-C00B0F9DE88D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DA466B1-BDF8-43E3-A25E-FBCB2380F588}

@@ -1,0 +1,30 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Tai.Controls.DurationTextBlock">
+    <Style TargetType="{x:Type local:DurationTextBlock}">
+        <Setter Property="ValueForeground" Value="Black"/>
+        <Setter Property="TextForeground" Value="Black"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:DurationTextBlock}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="PART_Hours" Text="123" Foreground="{TemplateBinding ValueForeground}" FontSize="{TemplateBinding ValueFontSize}" FontFamily="{TemplateBinding ValueFontFamily}" FontWeight="{TemplateBinding ValueFontWeight}" FontStretch="{TemplateBinding ValueFontStretch}" FontStyle="{TemplateBinding ValueFontStyle}" VerticalAlignment="{TemplateBinding ValueVerticalAlignment}"/>
+                        <TextBlock x:Name="PART_HoursText" Grid.Column="1" Margin="5,0" Foreground="{TemplateBinding TextForeground}" FontSize="{TemplateBinding TextFontSize}" FontFamily="{TemplateBinding TextFontFamily}" FontWeight="{TemplateBinding TextFontWeight}" FontStretch="{TemplateBinding TextFontStretch}" FontStyle="{TemplateBinding TextFontStyle}" VerticalAlignment="{TemplateBinding TextVerticalAlignment}"/>
+                        <TextBlock x:Name="PART_Minutes" Grid.Column="2"  Foreground="{TemplateBinding ValueForeground}" FontSize="{TemplateBinding ValueFontSize}" FontFamily="{TemplateBinding ValueFontFamily}" FontWeight="{TemplateBinding ValueFontWeight}" FontStretch="{TemplateBinding ValueFontStretch}" FontStyle="{TemplateBinding ValueFontStyle}" VerticalAlignment="{TemplateBinding ValueVerticalAlignment}"/>
+                        <TextBlock x:Name="PART_MinutesText" Grid.Column="3" Margin="5,0"  Foreground="{TemplateBinding TextForeground}" FontSize="{TemplateBinding TextFontSize}" FontFamily="{TemplateBinding TextFontFamily}" FontWeight="{TemplateBinding TextFontWeight}" FontStretch="{TemplateBinding TextFontStretch}" FontStyle="{TemplateBinding TextFontStyle}" VerticalAlignment="{TemplateBinding TextVerticalAlignment}"/>
+                        <TextBlock x:Name="PART_Seconds" Grid.Column="4"  Foreground="{TemplateBinding ValueForeground}" FontSize="{TemplateBinding ValueFontSize}" FontFamily="{TemplateBinding ValueFontFamily}" FontWeight="{TemplateBinding ValueFontWeight}" FontStretch="{TemplateBinding ValueFontStretch}" FontStyle="{TemplateBinding ValueFontStyle}" VerticalAlignment="{TemplateBinding ValueVerticalAlignment}"/>
+                        <TextBlock x:Name="PART_SecondsText" Grid.Column="5" Margin="5,0"  Foreground="{TemplateBinding TextForeground}" FontSize="{TemplateBinding TextFontSize}" FontFamily="{TemplateBinding TextFontFamily}" FontWeight="{TemplateBinding TextFontWeight}" FontStretch="{TemplateBinding TextFontStretch}" FontStyle="{TemplateBinding TextFontStyle}" VerticalAlignment="{TemplateBinding TextVerticalAlignment}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
